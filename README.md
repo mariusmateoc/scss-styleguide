@@ -108,7 +108,7 @@ Currently, the [most efficient way to serve CSS for multiple devices is via 1 st
 
 **Naming Conventions**
 
-There are [various naming conventions](http://www.brettjankord.com/2013/03/06/more-thoughts-on-html-class-naming-conventions/). Below is my preferred naming convention for modules, modifiers, and subcomponents.
+There are [various naming conventions](http://www.brettjankord.com/2013/03/06/more-thoughts-on-html-class-naming-conventions/). Below is my preferred naming convention for block, modifiers, and subcomponents/element. Learn the easy way to use [BEM](https://bem.info/) with [SASS](http://sass-lang.com/) [HERE](http://alwaystwisted.com/post.php?s=2014-02-27-even-easier-bem-ing-with-sass-33)
 
 ```scss
 .block {...}
@@ -175,15 +175,6 @@ Inspired by [Geek Roket](http://geek-rocket.de/frontend-development/scss-stylegu
   }
 ```
 
-### States
-
-States styles are things like media queries, :hover, :focus, etc., and JavaScript states.
-
-* Include state styles that after the styles they are affecting.
-* Prefix JavaScript states with `js-`
-* Prefer classes for JavaScript hooks compared to IDs or data-attributes. This allows them to be reusable, though still performant in querying the DOM.
-
-
 ## Comments & Documentation
 
 I've adopted [HTML5 Boilerplate](http://html5boilerplate.com/) commenting guidelines.
@@ -216,32 +207,6 @@ I've adopted [HTML5 Boilerplate](http://html5boilerplate.com/) commenting guidel
 
 /* Basic comment */
 ```
-
-SCSS Coding Standards
-==========================
-
-These standards have been adopted from Chris Coyier's Sass Style Guide article. [Source](http://css-tricks.com/sass-style-guide/)
-
-* List extends first.
-* List includes next, unless they are media queries.
-* List regular styles next.
-* List include media queries next.
-* List nested selectors last.
-* Use same order inside nested selectors.
-* Add a line before nested selectors.
-
-* Nest and name your media queries. [Source](http://css-tricks.com/naming-media-queries/)
-
-Example
-
-	.sidebar {
-	  float: right;
-	  width: 33.33%;
-	  @include breakpoint(small) {
-	  	width: 25%;
-	  }
-	}
-
 
 ### Scss File Structure
 
